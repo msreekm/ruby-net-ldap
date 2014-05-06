@@ -9,6 +9,13 @@ module Net::BER::Extensions::String
   # with 0x04, but other values are possible depending on the context, so we
   # let the caller give us one.
   #
+  #
+  #
+  #
+  #
+  #
+  #
+  
   # User code should call either #to_ber_application_string or
   # #to_ber_contextspecific.
   def to_ber(code = 0x04)
