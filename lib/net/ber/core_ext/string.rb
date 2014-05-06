@@ -21,7 +21,10 @@ module Net::BER::Extensions::String
 	# This is required for proper representation of binary data for Microsoft
 	# Active Directory
 	def to_ber_bin(code = 0x04)
+           begin	
 		[code].pack('C') + length.to_ber_length_encoding + self
+	   rescue
+	   end
 	end
 
   def raw_utf8_encoded
