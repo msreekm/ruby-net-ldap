@@ -36,6 +36,8 @@ module Net::BER::Extensions::String
         self
       rescue Encoding::ConverterNotFoundError
         return self
+      rescue 
+        return self
       end
     else
       self
